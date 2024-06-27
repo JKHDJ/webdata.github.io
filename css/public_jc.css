@@ -1,0 +1,59 @@
+
+header .img_jc {
+    display: block;
+    
+}
+
+.navbar_jc {
+    width: 390px;
+    height: 70px;
+    float: left;
+}
+
+.middlesec_jc {
+    position: absolute ;
+    top: 0px;
+    width: 100%;
+    float: left;
+    font-size: 17px;
+    /* margin-top: 18px; */
+    margin-left: 600px;
+}
+
+
+.header_jc {
+    height: 70px;
+    width: 100%;
+    background: white;
+    position: fixed;
+    /*固定在顶部*/
+    top: 0;
+    /*离顶部的距离为0*/
+    left: 0px;
+}
+
+.header_jc .ul_jc {
+    width: 80%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.header_jc .li_jc {
+    float: left;
+    margin-right: 60px;
+    /* 两个li之间的距离*/
+    position: relative;
+    overflow: hidden;
+}
+
+.header_jc .a_jc {
+    display: block;
+    /* 把链接显示为块元素可使整个链接区域可点击 */
+    color: black;
+    text-align: center;
+    padding: 5px;
+    overflow: hidden;
+    text-decoration: none;
+}

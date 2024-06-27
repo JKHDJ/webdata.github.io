@@ -1,0 +1,148 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    clear: none;
+}
+
+body {
+    min-width: 1400px;
+    background: linear-gradient(to bottom, #269eba 0%, #269eba 50%, white 77%, white 100%);
+}
+
+.textwrapper_jc {
+    margin-top: 180px;
+    color: white;
+}
+
+.subtitle_jc {
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+.partonepadded_jc {
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50px;
+    padding: 0px;
+    background-color: purple;
+    margin-top: 60px;
+    margin-left: 670px;
+}
+
+.canjia_jc {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+}
+
+.partonepadded_jc:hover {
+    background-color: #7e2065;
+}
+
+.actionwrapper_jc {
+    width: 1200px;
+    height: 500px;
+}
+
+.actionwrapper_jc img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 155px;
+}
+
+.parttwo_jc {
+    text-align: center;
+    text-decoration: none;
+    float: left;
+}
+
+.width-border {
+    font-size: 16px;
+    color: rgb(15, 147, 171);
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    margin-right: 2%;
+}
+
+.footer-copyright {
+    color: grey;
+}
+
+.translation-alert {
+    color: grey;
+    font-size: 14px;
+}
+
+.login_jc {
+    height: 0px;
+}
+
+.header {
+    min-width: 1400px;
+    width: 100%;
+    height: 70px;
+    background-color: white;
+    position: fixed;
+    top: 0px;
+    box-shadow: 1px 1px 3px #ffffff70;
+}
+
+.img_jc img {
+    padding: 10px;
+    height: 50px;
+    width: 260px;
+}
+
+.header div {
+    float: left;
+}
+
+.ul_jc {
+    width: 500px;
+    height: 70px;
+    margin-left: calc(50% - 250px - 260px);
+}
+
+.dl_jc {
+    margin-left: 20%;
+}
+
+.li_jc {
+    font-size: 20px;
+    text-decoration: none;
+    line-height: 70px;
+    margin-left: 50px;
+    color: black;
+    border-top: 2px solid white;
+}
+
+.li_jc a {
+    text-decoration: none;
+    color: black;
+}
+
+.li_jc:hover {
+    border-top: 2px solid rgb(38, 158, 186);
+}
+
+.dl_jc {
+    width: 80px;
+    height: 35px;
+    background-color: white;
+    border-radius: 20px;
+    color: white;
+    font-size: 14px;
+    line-height: 35px;
+    text-align: center;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.dl_jc:hover {
+    background-color: #8b2671;
+}

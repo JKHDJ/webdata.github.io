@@ -1,0 +1,289 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    /* clear: both; */
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.2);
+    font: 13px/20px Georgia, "Times New Roman", Times, serif;
+    text-decoration: none;
+}
+
+.login_jc {
+    width: 450px;
+    height: 0px;
+    background-color: white;
+    position: fixed;
+    top: 150px;
+    left: calc(50% - 230px);
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px #00000050;
+    overflow: hidden;
+    transition-duration: 0.3s;
+}
+
+.register_jc {
+    width: 450px;
+    height: 0px;
+    background-color: white;
+    position: fixed;
+    top: 150px;
+    left: calc(50% - 230px);
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px #00000050;
+    overflow: auto;
+    transition-duration: 0.3s;
+    transform: rotateY(-180deg);
+    backface-visibility: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.serve_jc {
+    width: 450px;
+    height: 550px;
+    background-color: white;
+    position: fixed;
+    top: 150px;
+    left: calc(50% - 230px);
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px #00000050;
+    overflow: auto;
+    transition-duration: 0.3s;
+    /* backface-visibility: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow-x: hidden;
+    overflow-y: auto; */
+    z-index: -99;
+    display: none;
+}
+
+.register_jc::-webkit-scrollbar {
+    display: none;
+}
+
+.title_jc {
+    text-align: center;
+    color: rgb(81, 89, 106);
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.title2_jc {
+    text-align: center;
+    color: rgb(81, 89, 106);
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+a {
+    color: rgb(73, 156, 183);
+}
+
+.msg {
+    margin: 10px;
+    padding: 10px;
+    color: rgb(81, 89, 106);
+}
+
+.p {
+    line-height: 1.8;
+    margin-bottom: 17px;
+    margin-top: 0;
+    font-family: Open Sans, Helvetica Neue, Arial;
+}
+
+.xiaozi_jc {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.button_jc {
+    border: none;
+    background-color: #5cb3cc;
+    border-color: #5cb3cc;
+    color: #fff;
+    border-radius: 40px;
+    width: 165px;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: calc(50% - 85px);
+    text-align: center;
+    color: white;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.button_jc span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button_jc span:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button_jc:hover span {
+    padding-right: 25px;
+}
+
+.button_jc:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.geshi_jc {
+    margin: 10px;
+    padding: 5px;
+    color: rgb(81, 89, 106);
+    font-size: 20px;
+    margin-left: 40px;
+}
+
+.geshi2_jc {
+    margin: 5px;
+    padding: 5px;
+    color: rgb(81, 89, 106);
+    font-size: 18px;
+    margin-left: 40px;
+}
+
+
+/* #register_jc {
+    display: none;
+    /* margin-left: 20px; */
+
+
+/* } */
+
+input {
+    margin-bottom: 15px;
+}
+
+.btn_jc {
+    width: 170px;
+    height: 40px;
+    background-color: rgb(136, 97, 154);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: calc(50% - 100px);
+    border-radius: 40px;
+    text-align: center;
+    color: white;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.btn_jc:hover {
+    background-color: rgb(108, 77, 123);
+}
+
+.close_jc {
+    height: 30px;
+    width: 30px;
+    border-radius: 100px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-size: 14px;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    border: 2px solid #c4cbcf;
+}
+
+.close_jc:hover {
+    border: 2px solid rgb(67, 64, 64);
+}
+
+.name_message_jc {
+    display: inline-block;
+    font-size: 12px;
+    color: #999;
+    /* background: url(img/mess.png) no-repeat left center; */
+    padding-left: 40px;
+}
+
+.email_message_jc {
+    display: inline-block;
+    font-size: 12px;
+    color: #999;
+    /* background: url(img/mess.png) no-repeat left center; */
+    padding-left: 40px;
+}
+
+.password_message_jc {
+    display: inline-block;
+    font-size: 12px;
+    color: #999;
+    /* background: url(img/mess.png) no-repeat left center; */
+    padding-left: 40px;
+}
+
+.password2_message_jc {
+    display: inline-block;
+    font-size: 12px;
+    color: #999;
+    /* background: url(img/mess.png) no-repeat left center; */
+    padding-left: 40px;
+}
+
+.wrong {
+    color: red;
+    margin-left: 10px;
+}
+
+#logUN_jc,
+#logPW_jc,
+.regUN_jc,
+.name_jc,
+.regPW_jc,
+.regPW2_jc {
+    border: 1px #aaa solid;
+    border-radius: 4px;
+    background: 0 0;
+    text-align: left;
+    font-size: 20px;
+    width: 300px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    margin-left: 50px;
+}
+
+.eye {
+    width: 16px;
+    height: 14px;
+    position: absolute;
+    display: inline-block;
+    cursor: pointer;
+    left: 328px;
+    top: 127px;
+}
+
+.eye.close {
+    background: url(../images/pigsney-close.png) center center no-repeat;
+}
+
+.eye.open {
+    background: url(../images/pigsney-open.png) center center no-repeat;
+    background-color: #FFFFFF
+}

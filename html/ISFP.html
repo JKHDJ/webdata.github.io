@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>探险家ISFP</title>
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/endAnalyse_style.css">
+</head>
+<body>
+    <div class="main_jc">
+        <div class="head_jc">
+            <p class="title_jc">探险家<span class="lititle_jc">ISFP-A</span></p>
+        </div>
+        <div class="mainbody_jc">
+            <div class="frame1_jc">
+                <div class="lihead_jc ">
+                    <p class="id_jc">泸沽湖</p>
+                </div>
+                <div class="libody_jc"><img src="../img/ISFP.png" alt="" class="img_jc">
+                    <p class="jiej_jc"></p>
+                </div>
+            </div>
+            <div class="frame2_jc">
+                <div class="shan_jc">
+                    <div id="container" style="height: 100%"></div>
+                </div>
+            </div>            
+            <div class="frame3_jc">   
+               <div class="prod2_jc" id="prod2_jc">
+                <div  class="prod2wz_jc">详解</div>
+               </div>
+               <div class="prod1_jc" id="prod1_jc"> 
+                <div class="prod1wz_jc" >简介</div>       
+            </div>
+            <a href="../index.html" ><div class="test_jc" style="background: rgba(249,240,159,1);
+              background: -moz-linear-gradient(45deg, rgba(249,240,159,1) 0%, rgba(255,200,133,0.99) 50%, rgba(255,204,133,0.98) 100%);
+              background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(249,240,159,1)), color-stop(50%, rgba(255,200,133,0.99)), color-stop(100%, rgba(255,204,133,0.98)));
+              background: -webkit-linear-gradient(45deg, rgba(249,240,159,1) 0%, rgba(255,200,133,0.99) 50%, rgba(255,204,133,0.98) 100%);
+              background: -o-linear-gradient(45deg, rgba(249,240,159,1) 0%, rgba(255,200,133,0.99) 50%, rgba(255,204,133,0.98) 100%);
+              background: -ms-linear-gradient(45deg, rgba(249,240,159,1) 0%, rgba(255,200,133,0.99) 50%, rgba(255,204,133,0.98) 100%);
+              background: linear-gradient(45deg, rgba(249,240,159,1) 0%, rgba(255,200,133,0.99) 50%, rgba(255,204,133,0.98) 100%);">点击重测</div></a>
+            </div>
+        </div>
+        <div class="frame4_jc">
+            在一天中我会变化。 醒来时是一个人，睡觉时却明明是另一个人。
+        </div>
+       <div class="picture_jc"><img src="../img/xm.gif" alt="" class="pic_jc"></div>
+    </div>  
+        <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+        <script type="text/javascript">
+          var ls=localStorage;
+          var a=ls.getItem('a');
+          var a=JSON.parse(a);
+            var dom = document.getElementById('container');
+            var myChart = echarts.init(dom, null, {
+              renderer: 'canvas',
+              useDirtyRect: false
+            });
+            var app = {};   
+            var option;
+            option = {
+          title: { 
+            left: 'center'
+          },
+          tooltip: {
+            trigger: 'item',
+          },
+          color:[
+          '#fca104','#fcb70a','#f8bc31','#feba07','#f9d367','fbcd31','#f7de98','#f7da94'
+          ],
+          toolbox: {
+            show: true,
+            feature: {
+              mark: { show: true },
+            }
+          },
+          series: [
+            {
+              type: 'pie',
+              radius: [40, 200],
+              center: ['43%', '50%'],
+              roseType: 'area',
+              itemStyle: {
+                borderRadius: 5
+              },
+              data: [
+              { value: a.I, name: 'I内向' },
+              { value: a.S, name: 'S感觉' },
+              { value: a.F, name: 'F情感' },
+              { value: a.P, name: 'P知觉' },
+              { value: a.E, name: 'E外向' },
+              { value: a.N, name: 'N直觉' },
+              { value: a.T, name: 'T思维' },                              
+              { value: a.J, name: 'J判断' }
+              ]
+            }
+          ]
+        };
+        
+            if (option && typeof option === 'object') {
+              myChart.setOption(option);
+            }
+        
+            window.addEventListener('resize', myChart.resize);
+          </script>  
+           <script src="../js/endAnalyse.js"></script> 
+           <script> 
+            art2.onmouseover=function(){
+            art2.innerHTML="'探险家'们生活在一个多彩感性的世界，与人们和想法的联系会让他们深受启发。 他们乐于重新解读这些联系，利用自身和新的视角重新实验和发明。 没有人比他们更喜欢用这种方式去探索和体验。 这营造出一种自发性，使“探险家”们看起来变化莫测，甚至对亲密的朋友和所爱的人也是如此。“探险家”们喜欢找各种方式来释放自己的激情。 他们比别的人格类型更容易参与有风险的行为。 "
+            art2.className="art2_jc prod2_jc";
+            }
+            art1.onmouseover=function(){
+            art1.innerHTML="灵活有魅力的艺术家，热爱新鲜事物；多愁善感、经常逞强、待人真诚、随性、不喜欢做性格测验、难以预测以及喜欢艺术"
+            art1.className="art1_jc prod1_jc";
+}
+          </script>
+</body>
+</html>

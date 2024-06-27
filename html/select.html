@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index数据可视</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ecf0f3;
+            color: #a0a5a8;
+            background-size: cover;
+        }
+        
+        #nav {
+            position: fixed;
+            margin: 0;
+            padding: 0;
+            top: 0;
+            left: 0%;
+            right: 0%;
+            border: none;
+            border-radius: 10em;
+            display: flex;
+            list-style: none;
+            background: #383838;
+            box-shadow: 20px 40px 40px #00000033;
+            padding: 10px;
+            overflow: hidden;
+        }
+        
+        #nav li a {
+            position: relative;
+            padding: 15px 50px;
+            font: 500 24px '优设标题黑';
+            border: none;
+            outline: none;
+            color: rgb(70, 100, 180);
+            display: inline-block;
+            text-decoration: none;
+            z-index: 3;
+        }
+        
+        .slide1,
+        .slide2 {
+            position: absolute;
+            display: inline-block;
+            height: 60px;
+            border-radius: 10em;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1.05);
+        }
+        
+        .slide1 {
+            background-color: rgb(170, 190, 255);
+            z-index: 2;
+        }
+        
+        .slide2 {
+            opacity: 0;
+            background-color: rgba(170, 190, 255, .5);
+            z-index: 1;
+            box-shadow: 0 0 20px #ffffffaa inset;
+        }
+        
+        .squeeze {
+            transform: scale(0.9);
+        }
+        
+        .shell {
+            width: 90%;
+            height: 700px;
+            display: flex;
+        }
+        
+        .box {
+            flex: 1;
+            overflow: hidden;
+            transition: .5s;
+            margin: 0 20px;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, .5);
+            border-radius: 20px;
+            border: 10px solid #fff;
+            background-color: #fff;
+        }
+        
+        .box>img {
+            width: 200%;
+            height: 85%;
+            object-fit: cover;
+            transition: .5s;
+        }
+        
+        .box>span {
+            font: 200 45px '优设标题黑';
+            text-align: center;
+            height: 15%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .box:hover {
+            flex-basis: 40%;
+        }
+        
+        .box:hover>img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="shell">
+        <div class="box">
+            <a href="../index.html" style="text-decoration: none;color: rgb(157, 159, 161);font: 200 25px '优设标题黑';">
+                <img src="../img/sjks.jpeg">
+                <span>数据可视</span>
+            </a>
+        </div>
+        <div class="box">
+            <a href="bdyj.html" style="text-decoration: none;color: rgb(157, 159, 161);font: 200 25px '优设标题黑';">
+                <img src="../img/final.png">
+                <span>意见反馈</span>
+            </a>
+        </div>
+        <div class="box">
+            <a href="choose.html" style="text-decoration: none;color: rgb(157, 159, 161);font: 200 25px '优设标题黑';">
+                <img src="../img/ljhrgcs.jpg">
+                <span>人格测试</span>
+            </a>
+        </div>
+    </div>
+    <div id="s1">
+        <ul id="nav">
+            <li class="slide1"></li>
+            <li class="slide2"></li>
+            <li><a href="#">亲爱的用户💕欢迎访问计算机就业指导网站💕请选择功能</a></li>
+
+
+        </ul>
+    </div>
+    <audio src="music/3.MP3" autoplay="autoplay" loop="loop"></audio>
+</body>
+
+
+</html>

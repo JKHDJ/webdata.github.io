@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico">
+</head>
+
+<body>
+    <section>
+        <div id="loginStatus"></div>
+
+        <!-- 登录 -->
+
+        <div class="container">
+            <div class="user singinBx">
+                <div class="imgBx"><img src="../img/1.jpg" alt=""></div>
+                <div class="formBx">
+                    <form action="" id="loginForm" onsubmit="return login()">
+                        <h2>登录</h2>
+                        <label for="username">用户名:</label>
+                        <input id="username" name="username" required placeholder="请输入您的用户名">
+                        <label for="password">密码:</label>
+                        <input type="password" id="password" name="password" required placeholder="请输入您的密码">
+                        <button type="submit">登录</button>
+                        <p class="signup">没有账号？<a href="#" onclick="topggleForm();">注册</a></p>
+                    </form>
+                </div>
+            </div>
+
+            <!-- 注册 -->
+
+            <div class="user singupBx">
+                <div class="formBx">
+                    <form id="registerForm" onsubmit="return register()">
+                        <h2>注册</h2>
+                        <label for="registerUsername">用户名:</label>
+                        <input type="text" id="registerUsername" name="registerUsername" required placeholder="请输入您的用户名">
+                        <label for="registerEmail">邮箱:</label>
+                        <input type="text" id="registerEmail" name="registerEmail" required placeholder="请输入您的邮箱地址">
+                        <label for="registerPassword">密码:</label>
+                        <input type="password" id="registerPassword" name="registerPassword" required placeholder="请输入您的密码">
+                        <p class="t">以字母开头，长度在6,18之内，只能包含字母、数字</p>
+
+                        <input type="password" id="registerPasswordtwo" name="registerPasswordtwo" required class="p2" placeholder="再次输入密码">
+                        <p class="t1"></p>
+
+                        <button type="submit">注册</button>
+                        <p class="signup">已有账号？<a href="#" onclick="topggleForm();">登录</a></p>
+                    </form>
+                </div>
+                <div class="imgBx"><img src="../img/2.jpg" alt=""></div>
+            </div>
+
+        </div>
+
+    </section>
+    <script type="text/javascript">
+        function topggleForm() {
+            var container = document.querySelector('.container'); //获取第一个class等于container的文件
+            container.classList.toggle('active'); //有active时删除没有时添加
+        }
+    </script>
+    <script>
+        var ipt1 = document.querySelector('.p2');          
+        var message1 = document.querySelector('.t1');          
+        ipt1.onblur = function() {            
+            var pattern1 = ipt.value;            
+            console.dir(ipt1);            
+            var password1 = ipt1.value;            
+            var flag = password1.match(pattern1);            
+            if (flag && password1 != '') {              
+                message1.innerHTML = '您输入的密码正确';                        
+            }   
+            else {              
+                message1.innerHTML = '重复密码错误';                     
+            }          
+        }
+    </script>
+    <script>
+        var ipt = document.querySelector('.p1');              
+        var message = document.querySelector('.t');              
+        ipt.onblur = function() {                
+            var pattern = /\w{6,18}/;                
+            console.dir(ipt);                
+            var password = ipt.value;                
+            var flag = password.match(pattern);                
+            if (flag && password != '') {                  
+                console.log(message.innerHTML);                  
+                message.innerHTML = '您输入的密码正确';                
+            }                
+            else {                  
+                message.innerHTML = '重复密码错误';                
+            }              
+        }
+        localStorage.setItem('text', 'password');
+    </script>
+    <script src="../js/app.js"></script>
+    <audio src="../music/3.MP3" autoplay="autoplay" loop="loop"></audio>
+</body>
+
+</html>

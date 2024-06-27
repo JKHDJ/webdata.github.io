@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBTI测试</title>
+    <link rel="stylesheet" href="../css/choose_style_jc.css">
+    <link rel="icon" href="../img/favicon.ico">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/indexforchoose.css">
+    <!-- <link rel="stylesheet" href="../css/public_jc.css"> -->
+    <style>
+        #border-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        button {
+            width: 125px;
+            height: 50px;
+            border: 0;
+            border-radius: 10px;
+            background: #2ec4b7;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 15px 30px;
+            outline: none;
+            position: relative;
+            /* 添加动画，对元素的 border-radius 添加 3s 的延迟效果 */
+            transition: border-radius 1s;
+            -webkit-transition: border-radius 2s;
+        }
+        
+        button:hover {
+            border-bottom-right-radius: 50px;
+            border-top-left-radius: 50px;
+            border-bottom-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        
+        button.xs {
+            background-color: royalblue;
+        }
+    </style>
+</head>
+
+<body style="background:none;">
+
+    <div class="header">
+        <div class="img_jc">
+            <a href="../index.html"><img src="../img/logo.png" alt=""></a>
+        </div>
+        <div class="ul_jc">
+            <div class="li_jc"><a href="choose.html">人格测试</a></div>
+            <div class="li_jc"><a href="select.html">功能选择</a></div>
+            <div class="li_jc"><a href="../index.html">返回主页</a></div>
+        </div>
+        <div class="dl_jc" id="dl_jc">Login</div>
+    </div>
+
+    <br>
+    <br>
+    <a name="one"></a>
+    <div style="background:url('../img/rgbg.jpg'); background-size: 100% 100%; width: 100%; height: 415px;"></div>
+    <div class="zdbk_jc">
+        <div class="ys_jc"><span>0%</span></div>
+        <div class="dbk_jc">
+            <div class="xbk_jc"></div>
+        </div>
+    </div>
+    <a name="two"></a>
+    <div class="chooseshll_jc">
+        <br>
+        <a></a>
+        <p>你发现在向别人做自我介绍时有困难。</p>
+        <br><br>
+        <div class="cyssm_jc list1">
+            <div id="border-btn" class="cyssm_jc">
+                <button>同意</button>
+            </div>
+            <div id="border-btn" class="cyssm_jc">
+                <button>比较同意</button>
+            </div>
+            <div id="border-btn" class="cyssm_jc">
+                <button>不知道</button>
+            </div>
+            <div id="border-btn" class="cyssm_jc">
+                <button>比较反对</button>
+            </div>
+            <div id="border-btn" class="cyssm_jc">
+                <button>反对</button>
+            </div>
+        </div>
+    </div>
+    <hr width="70%" align="center">
+    <a name="tree"></a>
+    <div class="chooseshll_jc">
+        <br>
+        <a></a>
+        <p>你经常陷入沉思，忽视或忘记了周围。</p>
+        <br><br>
+        <div class="cyssm_jc list2">
+            <div id="border-btn" class="cyssm_jc">
+                <button>同意</button>
+            </div>
+            <div id="border-btn" class="cyssm_jc">
+                <button>比较同意</button>
+            </div>
+            <div id="border-btn" class="cyssm_jc">
+                <button>不知道</button>
+            </div>
+            <div id="border-btn" class="cyssm_jc">
+                <button>比较反对</button>
+            </div>
+            <div id="border-btn" class="cyssm_jc">
+                <button>反对</button>
+            </div>
+        </div>
+
+    </div>
+    <hr width="70%" align="center">
+    <a name="four"></a>
+    <div class="chooseshll_jc">
+        <br>
+        <a> </a>
+        <p>你总想尽快回复电子邮件，无法忍受杂乱的收件箱。</p>
+        <br><br>
+        <div class="cyssm_jc list3">
+            <div id="border-btn" class="cyssm_jc">
+                <button>同意</button>
+            </div>
+            <div id="border-btn" class="cyssm_jc">
+                <button>比较同意</button>
+            </div>
+            <div id="border-btn" class="cyssm_jc">
+                <button>不知道</button>
+            </div>
+            <div id="border-btn" class="cyssm_jc">
+                <button>比较反对</button>
+            </div>
+            <div id="border-btn" class="cyssm_jc">
+                <button>反对</button>
+            </div>
+        </div>
+
+    </div>
+    <hr width="70%" align="center">
+    <a name="five"></a>
+    <div class="chooseshll_jc">
+        <br>
+        <a></a>
+        <p>你发现，即便有些压力，你也能轻易保持放松和专注。</p>
+        <br><br>
+        <div class="cyssm_jc list4">
+            <div id="border-btn" class="cyssm_jc">
+                <button>同意</button>
+            </div>
+            <div id="border-btn" class="cyssm_jc">
+                <button>比较同意</button>
+            </div>
+            <div id="border-btn" class="cyssm_jc">
+                <button>不知道</button>
+            </div>
+            <div id="border-btn" class="cyssm_jc">
+                <button>比较反对</button>
+            </div>
+            <div id="border-btn" class="cyssm_jc">
+                <button>反对</button>
+            </div>
+        </div>
+    </div>
+    <a name="six"></a>
+    <hr width="70%" align="center">
+    <div class="chooseshll_jc">
+        <br>
+        <a></a>
+        <p>你通常不会主动跟人交谈。</p>
+        <br><br>
+        <div class="cyssm_jc list5">
+            <div id="border-btn" class="cyssm_jc">
+                <button>同意</button>
+            </div>
+            <div id="border-btn" class="cyssm_jc">
+                <button>比较同意</button>
+            </div>
+            <div id="border-btn" class="cyssm_jc">
+                <button>不知道</button>
+            </div>
+            <div id="border-btn" class="cyssm_jc">
+                <button>比较反对</button>
+            </div>
+            <div id="border-btn" class="cyssm_jc">
+                <button>反对</button>
+            </div>
+        </div>
+
+    </div>
+    <a name="seven"></a>
+    <hr width="70%" align="center">
+    <div class="chooseshll_jc">
+        <br>
+        <a></a>
+        <p>你很少出于纯粹的好奇心做什么事。</p>
+        <br><br>
+        <div class="cyssm_jc list6">
+            <div id="border-btn" class="cyssm_jc">
+                <button>同意</button>
+            </div>
+            <div id="border-btn" class="cyssm_jc">
+                <button>比较同意</button>
+            </div>
+            <div id="border-btn" class="cyssm_jc">
+                <button>不知道</button>
+            </div>
+            <div id="border-btn" class="cyssm_jc">
+                <button>比较反对</button>
+            </div>
+            <div id="border-btn" class="cyssm_jc">
+                <button>反对</button>
+            </div>
+        </div>
+
+    </div>
+    <hr width="70%" align="center">
+    <br>
+    <br>
+    <a></a>
+    <a href="#one">
+        <div>
+            <div class="an_jc">
+                <br>
+                <span class="xg_jc">下一步</span>
+                <div class="syh_jc">→</div>
+            </div>
+        </div>
+    </a>
+    <br>
+    <br>
+    <footer class="footer_jc" align="center">
+        <div class="footer-copyright">&copy 2022 The copyright belongs to 就差你们组 <br>Do not copy or mirror without permission</div>
+        <br>
+        <div class="footer-links">
+            <a class="width-border" href="">Contact</a>
+            <a class="width-border" href="">Testimonials</a>
+            <a class="width-border" href="">Terms & Conditions</a>
+            <a class="width-border" href="">Privacy Policy</a>
+            <a class="width-border" href="">For Teams</a>
+        </div>
+        <br>
+        <div class="footer-social">
+            <a class="no-formatting"><img style="width: 100px;height:30px;" src="../img/Facebook.png" alt=""></a>
+        </div>
+        <br>
+        <div class="translation-alert">
+            <strong>Disclaimer</strong> :All non-English versions of the website contain unofficial translations contributed by our users. They are not binding in any way,are not
+            <br> guaranteed to be accurate, and have no legal effect. The official text is the English version of the website. Please consider reporting inaccuracies to
+            <br>support@16personalities.com or join our translation project!
+
+        </div>
+    </footer>
+    <br>
+    <!-- <img src="../img/chooseend.jpg" alt="" style="width: 100%; height: 300px;"> -->
+    <div id="login_jc" class="login_jc">
+        <button type="button" class="close_jc" onclick="close1_jc()" value="close">x</button>
+        <p class="title_jc">登录</p>
+        <p class="geshi_jc">邮箱地址:</p>
+        <input placeholder="your@e-mail" type="text" id="logUN_jc">
+        <p class="geshi_jc">密&nbsp&nbsp&nbsp&nbsp码： </p>
+        <input placeholder="*********" type="password" id="logPW_jc">
+        <span class="eye" ng-class="{true: 'open', false: 'close'}[pswShow]" ng-click="pswShow=!pswShow"></span>
+        <button type="button" value="登录" class="button_jc" onclick="log()"> <span>登录</span></button>
+        <p class="xiaozi_jc">没有账号?<a id="a1" href="javascript:;">去注册</a></p>
+        <p class="xiaozi_jc"><input class="wuyu_jc" id="wuyu_jc" type="checkbox"> 我已经阅读并同意相关<a id="serve" href="../html/serve.html">服务条款和隐私政策</a></p>
+    </div>
+    <div id="register_jc" class="register_jc">
+        <button type="button" class="close_jc" onclick="close2_jc()" value="close">x</button>
+        <p class="title2_jc">注册</p>
+        <p class="geshi2_jc">邮箱地址&nbsp&nbsp&nbsp: </p>
+        <input type="text" id="regUN_jc" class="regUN_jc">
+        <p class="email_message_jc"></p>
+        <p class="geshi2_jc">昵称: </p>
+        <input type="text" id="name_jc" class="name_jc">
+        <p class="name_message_jc"></p>
+        <p class="geshi2_jc">密&nbsp&nbsp&nbsp&nbsp&nbsp码：</p>
+        <input type="password" id="regPW_jc" class="regPW_jc">
+        <p class="password_message_jc">密码以字母开头，长度在6~18之间，只能包含字母、数字和下划线</p>
+        <p class="geshi2_jc">确认密码:</p>
+        <input type="password" id="regPW2_jc" class="regPW2_jc">
+        <p class="password2_message_jc"></p><br>
+        <button class="button_jc" onclick="reg()">注册</button>
+        <p class="xiaozi_jc">已经有账号?<a id="a2" href="javascript:;"> 去登录</a></p>
+        <br><br>
+    </div>
+    <script src="../js/uersname-jc.js"></script>
+    <script src="../js/data.js"></script>
+    <script src="../js/choose_js.js"></script>
+    <script src="../js/login.js"></script>
+    <script>
+        var dl = document.querySelector("#dl_jc");
+        var login = document.querySelector("#login_jc");
+        var main = document.querySelector("#main");
+        dl.onclick = function() {
+            login.style.height = "550px"
+            register_jc.style.height = "550px";
+        }
+        var sun = 0;
+        var a = 0;
+        var b = 0;
+        var c = 0;
+        var d = 0;
+        var e = 0;
+        var f = 0;
+        var buttons1 = document.getElementsByClassName("list1")[0];
+        var buttons11 = buttons1.querySelectorAll('button');
+        buttons11.forEach((element) =>
+            element.addEventListener("click", function() {
+                buttons11.forEach((fsl) => fsl.classList.remove('xs'));
+                this.classList.add('xs');
+                if (element.textContent === "同意") {
+                    sun -= a;
+                    sun += 2;
+                    a = 2;
+                } else if (element.textContent === "比较同意") {
+                    sun -= a;
+                    sun += 1;
+                    a = 1;
+                } else if (element.textContent === "比较反对") {
+                    sun -= a;
+                    sun -= 1;
+                    a = -1;
+                } else if (element.textContent === "反对") {
+                    sun -= a;
+                    sun -= 2;
+                    a = -2;
+                } else {
+                    sun -= a;
+                    a = 0;
+                }
+            })
+        );
+        var buttons2 = document.getElementsByClassName("list2")[0];
+        var buttons22 = buttons2.querySelectorAll('button');
+        buttons22.forEach((element) =>
+            element.addEventListener("click", function() {
+                buttons22.forEach((fsl) => fsl.classList.remove('xs'));
+                this.classList.add('xs');
+                if (element.textContent === "同意") {
+                    sun -= b;
+                    sun += 2;
+                    b = 2;
+                } else if (element.textContent === "比较同意") {
+                    sun -= b;
+                    sun += 1;
+                    b = 1;
+                } else if (element.textContent === "比较反对") {
+                    sun -= b;
+                    sun -= 1;
+                    b = -1;
+                } else if (element.textContent === "反对") {
+                    sun -= b;
+                    sun -= 2;
+                    b = -2;
+                } else {
+                    sun -= b;
+                    b = 0;
+                }
+            })
+        );
+        var buttons3 = document.getElementsByClassName("list3")[0];
+        var buttons33 = buttons3.querySelectorAll('button');
+        buttons33.forEach((element) =>
+            element.addEventListener("click", function() {
+                buttons33.forEach((fsl) => fsl.classList.remove('xs'));
+                this.classList.add('xs');
+                if (element.textContent === "同意") {
+                    sun -= c;
+                    sun += 2;
+                    c = 2;
+                } else if (element.textContent === "比较同意") {
+                    sun -= c;
+                    sun += 1;
+                    c = 1;
+                } else if (element.textContent === "比较反对") {
+                    sun -= c;
+                    sun -= 1;
+                    c = -1;
+                } else if (element.textContent === "反对") {
+                    sun -= c;
+                    sun -= 2;
+                    c = -2;
+                } else {
+                    sun -= c;
+                    c = 0;
+                }
+            })
+        );
+        var buttons4 = document.getElementsByClassName("list4")[0];
+        var buttons44 = buttons4.querySelectorAll('button');
+        buttons44.forEach((element) =>
+            element.addEventListener("click", function() {
+                buttons44.forEach((fsl) => fsl.classList.remove('xs'));
+                this.classList.add('xs');
+                if (element.textContent === "同意") {
+                    sun -= d;
+                    sun += 2;
+                    d = 2;
+                } else if (element.textContent === "比较同意") {
+                    sun -= d;
+                    sun += 1;
+                    d = 1;
+                } else if (element.textContent === "比较反对") {
+                    sun -= d;
+                    sun -= 1;
+                    d = -1;
+                } else if (element.textContent === "反对") {
+                    sun -= d;
+                    sun -= 2;
+                    d = -2;
+                } else {
+                    sun -= d;
+                    d = 0;
+                }
+            })
+        );
+        var buttons5 = document.getElementsByClassName("list5")[0];
+        var buttons55 = buttons5.querySelectorAll('button');
+        buttons55.forEach((element) =>
+            element.addEventListener("click", function() {
+                buttons55.forEach((fsl) => fsl.classList.remove('xs'));
+                this.classList.add('xs');
+                if (element.textContent === "同意") {
+                    sun -= e;
+                    sun += 2;
+                    e = 2;
+                } else if (element.textContent === "比较同意") {
+                    sun -= e;
+                    sun += 1;
+                    e = 1;
+                } else if (element.textContent === "比较反对") {
+                    sun -= e;
+                    sun -= 1;
+                    e = -1;
+                } else if (element.textContent === "反对") {
+                    sun -= e;
+                    sun -= 2;
+                    e = -2;
+                } else {
+                    sun -= e;
+                    e = 0;
+                }
+            })
+        );
+        var buttons6 = document.getElementsByClassName("list6")[0];
+        var buttons66 = buttons6.querySelectorAll('button');
+        buttons66.forEach((element) =>
+            element.addEventListener("click", function() {
+                buttons66.forEach((fsl) => fsl.classList.remove('xs'));
+                this.classList.add('xs');
+                if (element.textContent === "同意") {
+                    sun -= f;
+                    sun += 2;
+                    f = 2;
+                } else if (element.textContent === "比较同意") {
+                    sun -= f;
+                    sun += 1;
+                    f = 1;
+                } else if (element.textContent === "比较反对") {
+                    sun -= f;
+                    sun -= 1;
+                    f = -1;
+                } else if (element.textContent === "反对") {
+                    sun -= f;
+                    sun -= 2;
+                    f = -2;
+                } else {
+                    sun -= f;
+                    f = 0;
+                }
+                console.log(sun);
+            })
+        );
+    </script>
+</body>
+
+</html>

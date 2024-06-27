@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .con {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            height: 100vh;
+            padding: 0;
+            margin-top: -10px;
+            margin-bottom: -10px;
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+        
+        #a {
+            width: 100%;
+            height: 17%;
+            background-color: #B8D4F5;
+            ;
+            box-sizing: border-box;
+        }
+        
+        #b {
+            width: 100%;
+            height: 83%;
+            background-color: #E1EDFA;
+            box-sizing: border-box;
+        }
+        
+        #c {
+            margin-left: 40px;
+        }
+        
+        h1 {
+            color: azure;
+            text-align: center;
+        }
+        
+        input[type="checked"] {
+            display: none;
+        }
+        
+        .cus {
+            width: 110px;
+            height: 30px;
+            background-image: url('../img/cztyk.jpg');
+            background-size: cover;
+            display: inline-block;
+            cursor: pointer;
+        }
+        
+        input[type="checkbox"]:checked+.cus {
+            background-image: url('../img/cztyg.jpg');
+        }
+        
+        .cus2 {
+            width: 110px;
+            height: 30px;
+            background-image: url('../img/jmsmk.jpg');
+            background-size: cover;
+            display: inline-block;
+            cursor: pointer;
+        }
+        
+        input[type="checkbox"]:checked+.cus2 {
+            background-image: url('../img/jmsmg.jpg');
+        }
+        
+        .cus3 {
+            width: 110px;
+            height: 30px;
+            background-image: url('../img/gnyjk.jpg');
+            background-size: cover;
+            display: inline-block;
+            cursor: pointer;
+        }
+        
+        input[type="checkbox"]:checked+.cus3 {
+            background-image: url('../img/gnyjg.jpg');
+        }
+        
+        .cus4 {
+            width: 110px;
+            height: 30px;
+            background-image: url('../img/ymstk.jpg');
+            background-size: cover;
+            display: inline-block;
+            cursor: pointer;
+        }
+        
+        input[type="checkbox"]:checked+.cus4 {
+            background-image: url('../img/ymstg.jpg');
+        }
+        
+        .cus5 {
+            width: 110px;
+            height: 30px;
+            background-image: url('../img/qtfkk.jpg');
+            background-size: cover;
+            display: inline-block;
+            cursor: pointer;
+        }
+        
+        input[type="checkbox"]:checked+.cus5 {
+            background-image: url('../img/qtfkg.jpg');
+        }
+        
+        .con textarea {
+            width: 70%;
+            height: 100px;
+            padding: 5px 100px 100px 5px;
+            margin-left: 50px;
+        }
+        
+        .con input[type="text"] {
+            width: 70%;
+            height: 20px;
+            padding: 5px 5px 5px 90px;
+            margin-bottom: 16px;
+            margin-right: 6px;
+            margin-top: 2px;
+            line-height: 15px;
+            border-radius: 4px;
+            border: 1px solid #CCC;
+            color: #888;
+        }
+        
+        .con select {
+            color: #888;
+        }
+    </style>
+    <script>
+        function check() {
+            // var Email=document.getElementById('Email');
+            // var EmailVaule=Email.value;
+            // var pattern=/^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/g;
+            // var match=pattern.test
+            alert("反馈成功");
+        }
+    </script>
+</head>
+
+<body>
+    <div class="con">
+        <div id="a">
+            <h1>意见反馈</h1>
+        </div>
+        <div id="b">
+            <div id="c">
+                <form action="">
+                    <h3>问题类型:</h3>
+                    <label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" checked hidden>
+                <span class="cus"></span>
+            </label>
+                    <label>
+                &nbsp;&nbsp;&nbsp;<input type="checkbox" checked hidden>
+                    <span class="cus2"></span>
+            </label>
+                    <label>
+                &nbsp;&nbsp;&nbsp;<input type="checkbox" checked hidden>
+                    <span class="cus3"></span>
+            </label>
+                    <label> 
+                &nbsp;&nbsp;&nbsp;<input type="checkbox" checked hidden>
+                <span class="cus4"></span>
+            </label>
+                    <label>
+                &nbsp;&nbsp;&nbsp;<input type="checkbox" checked hidden>
+                <span class="cus5"></span>
+            </label>
+                    <label id="fankuiwenzi">
+                <h3>我要反馈：</h3>
+                <textarea id="mesaage" name="fankui" placeholder="你想说点什么"></textarea>
+            </label>
+                    <label>
+                <h3>Contact:</h3>
+                <select name="select2" class="select2">
+                    <option value="Phone" id="Phone">Phone</option>
+                    <option value="Email" id="Email">Email</option>
+                    <option value="QQ" id="QQ">QQ</option>
+                </select>
+                <input type="text" placeholder="">
+            </label>
+                    <label>
+                <input type="submit" class="button" value="提交" onclick="check()">
+                
+                
+            </label> <input type="reset" class="button" value="重置">
+                </form>
+            </div>
+        </div>
+    </div>
+    <audio src="../music/3.MP3" autoplay="autoplay" loop="loop"></audio>
+</body>
+
+</html>

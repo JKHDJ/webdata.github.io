@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBTI人格类型</title>
+    <link rel="stylesheet" href="../css/indexforchoose.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="icon" href="../img/favicon.ico">
+
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        body {
+            min-width: 1500px;
+            background: linear-gradient(to top, white 0%, white 50%, white 77%, white 100%);
+        }
+        
+        .navbar_jc {
+            width: 390px;
+            height: 70px;
+            float: left;
+        }
+        
+        .middlesec_jc {
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            float: left;
+            font-size: 17px;
+            /* margin-top: 18px; */
+            margin-left: 600px;
+        }
+        
+        header {
+            height: 70px;
+            width: 100%;
+            background: white;
+            position: fixed;
+            /*固定在顶部*/
+            top: 0;
+            /*离顶部的距离为0*/
+            left: 0px;
+        }
+        
+        header ul {
+            width: 80%;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        header li {
+            float: left;
+            margin-right: 60px;
+            /* 两个li之间的距离*/
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header a {
+            display: block;
+            /* 把链接显示为块元素可使整个链接区域可点击 */
+            color: black;
+            text-align: center;
+            padding: 5px;
+            overflow: hidden;
+            text-decoration: none;
+        }
+        
+        header img {
+            display: block;
+        }
+        
+        .allpic_jc img {
+            width: 100%;
+            height: 400;
+            margin-top: -10px;
+            display: block;
+            left: 0;
+            right: 0;
+        }
+        
+        footer img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 30px;
+            margin: auto;
+        }
+        
+        .parttwo_jc {
+            text-align: center;
+            text-decoration: none;
+            float: left;
+        }
+        
+        .width-border {
+            font-size: 16px;
+            color: rgb(15, 147, 171);
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            margin-right: 2%;
+        }
+        
+        .footer-copyright {
+            color: grey;
+        }
+        
+        .translation-alert {
+            color: grey;
+            font-size: 14px;
+        }
+        
+        .analysts_jc {
+            padding-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="img_jc">
+            <a href="../index.html"><img src="../img/logo.png" alt=""></a>
+        </div>
+        <div class="ul_jc">
+            <div class="li_jc"><a href="choose.html">人格测试</a></div>
+            <div class="li_jc"><a href="select.html">功能选择</a></div>
+            <div class="li_jc"><a href="../index.html">返回主页</a></div>
+        </div>
+        <div class="dl_jc" id="dl_jc">Login</div>
+    </div>
+    <div class="rengetype_jc">
+        <h1>人格类型</h1>
+    </div>
+    <div class="allpic_jc">
+        <div class="analysts_jc">
+            <a class="type">
+                <img src="../img/analysts.png" alt="">
+            </a>
+
+        </div>
+        <div class="diplomatists_jc">
+            <a class="type">
+                <img src="../img/diplomatists.png" alt="">
+            </a>
+        </div>
+        <div class="guardians_jc">
+            <a class="type">
+                <img src="../img/guardians.png" alt="">
+            </a>
+        </div>
+        <div class="explorers_jc">
+            <a class="type">
+                <img src="../img/explorers.png" alt="">
+            </a>
+        </div>
+    </div>
+    <footer class="footer_jc" align="center">
+        <br>
+        <br>
+        <div class="footer-copyright">&copy 2022 The copyright belongs to 就差你们组 <br>Do not copy or mirror without permission</div>
+        <br>
+        <div class="footer-links">
+            <a class="width-border" href="">Contact</a>
+            <a class="width-border" href="">Testimonials</a>
+            <a class="width-border" href="">Terms & Conditions</a>
+            <a class="width-border" href="">Privacy Policy</a>
+            <a class="width-border" href="">For Teams</a>
+        </div>
+        <br>
+        <div class="footer-social">
+            <a class="no-formatting"><img src="../img/Facebook.png" alt=""></a>
+        </div>
+        <br>
+        <div class="translation-alert">
+            <strong>Disclaimer</strong> :All non-English versions of the website contain unofficial translations contributed by our users. They are not binding in any way,are not
+            <br> guaranteed to be accurate, and have no legal effect. The official text is the English version of the website. Please consider reporting inaccuracies to
+            <br>support@16personalities.com or join our translation project!
+
+        </div>
+    </footer>
+    <div id="login_jc" class="login_jc">
+        <button type="button" class="close_jc" onclick="close1_jc()" value="close">x</button>
+        <p class="title_jc">登录</p>
+        <p class="geshi_jc">邮箱地址:</p>
+        <input placeholder="your@e-mail" type="text" id="logUN_jc">
+        <p class="geshi_jc">密&nbsp&nbsp&nbsp&nbsp码： </p>
+        <input placeholder="*********" type="password" id="logPW_jc">
+        <span class="eye" ng-class="{true: 'open', false: 'close'}[pswShow]" ng-click="pswShow=!pswShow"></span>
+        <button type="button" value="登录" class="button_jc" onclick="log()"> <span>登录</span></button>
+        <p class="xiaozi_jc">没有账号?<a id="a1" href="javascript:;">去注册</a></p>
+        <p class="xiaozi_jc"><input class="wuyu_jc" id="wuyu_jc" type="checkbox"> 我已经阅读并同意相关<a id="serve" href="../html/serve.html">服务条款和隐私政策</a></p>
+    </div>
+    <div id="register_jc" class="register_jc">
+        <button type="button" class="close_jc" onclick="close2_jc()" value="close">x</button>
+        <p class="title2_jc">注册</p>
+        <p class="geshi2_jc">邮箱地址&nbsp&nbsp&nbsp: </p>
+        <input type="text" id="regUN_jc" class="regUN_jc">
+        <p class="email_message_jc"></p>
+        <p class="geshi2_jc">昵称: </p>
+        <input type="text" id="name_jc" class="name_jc">
+        <p class="name_message_jc"></p>
+        <p class="geshi2_jc">密&nbsp&nbsp&nbsp&nbsp&nbsp码：</p>
+        <input type="password" id="regPW_jc" class="regPW_jc">
+        <p class="password_message_jc">密码以字母开头，长度在6~18之间，只能包含字母、数字和下划线</p>
+        <p class="geshi2_jc">确认密码:</p>
+        <input type="password" id="regPW2_jc" class="regPW2_jc">
+        <p class="password2_message_jc"></p><br>
+        <button class="button_jc" onclick="reg()">注册</button>
+        <p class="xiaozi_jc">已经有账号?<a id="a2" href="javascript:;"> 去登录</a></p>
+        <br><br>
+    </div>
+    <script src="../js/login.js"></script>
+    <script src="../js/uersname-jc.js"></script>
+    <script>
+        var dl = document.querySelector("#dl_jc");
+        var login = document.querySelector("#login_jc");
+        var main = document.querySelector("#main");
+        dl.onclick = function() {
+            login.style.height = "550px"
+            register_jc.style.height = "550px";
+        }
+    </script>
+</body>
+
+</html>

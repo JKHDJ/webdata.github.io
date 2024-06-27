@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鉴赏家ISTP</title>
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/endAnalyse_style.css">
+</head>
+<body>
+    <div class="main_jc">
+        <div class="head_jc">
+            <p class="title_jc">鉴赏家<span class="lititle_jc">ISTP-A</span></p>
+        </div>
+        <div class="mainbody_jc">
+            <div class="frame1_jc">
+                <div class="lihead_jc ">
+                    <p class="id_jc">泸沽湖</p>
+                </div>
+                <div class="libody_jc"><img src="../img/ISTP.png" alt="" class="img_jc">
+                    <p class="jiej_jc"></p>
+                </div>
+            </div>
+            <div class="frame2_jc">
+                <div class="shan_jc">
+                    <div id="container" style="height: 100%"></div>
+                </div>
+            </div>            
+            <div class="frame3_jc">   
+               <div class="prod2_jc" id="prod2_jc">
+                <div  class="prod2wz_jc">详解</div>
+               </div>
+               <div class="prod1_jc" id="prod1_jc"> 
+                <div class="prod1wz_jc" >简介</div>       
+            </div>
+            <a href="../index.html" ><div class="test_jc" style="background: rgba(249,240,159,1);
+              background: -moz-linear-gradient(45deg, rgba(249,240,159,1) 0%, rgba(255,200,133,0.99) 50%, rgba(255,204,133,0.98) 100%);
+              background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(249,240,159,1)), color-stop(50%, rgba(255,200,133,0.99)), color-stop(100%, rgba(255,204,133,0.98)));
+              background: -webkit-linear-gradient(45deg, rgba(249,240,159,1) 0%, rgba(255,200,133,0.99) 50%, rgba(255,204,133,0.98) 100%);
+              background: -o-linear-gradient(45deg, rgba(249,240,159,1) 0%, rgba(255,200,133,0.99) 50%, rgba(255,204,133,0.98) 100%);
+              background: -ms-linear-gradient(45deg, rgba(249,240,159,1) 0%, rgba(255,200,133,0.99) 50%, rgba(255,204,133,0.98) 100%);
+              background: linear-gradient(45deg, rgba(249,240,159,1) 0%, rgba(255,200,133,0.99) 50%, rgba(255,204,133,0.98) 100%);">点击重测</div></a>
+            </div>
+        </div>
+        <div class="frame4_jc">
+          我想要享受人生，一个不同的人生。
+        </div>
+       <div class="picture_jc"><img src="../img/xm.gif" alt="" class="pic_jc"></div>
+    </div>  
+        <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+        <script type="text/javascript">
+           var ls=localStorage;
+           var a=ls.getItem('a');
+           var a=JSON.parse(a);
+            var dom = document.getElementById('container');
+            var myChart = echarts.init(dom, null, {
+              renderer: 'canvas',
+              useDirtyRect: false
+            });
+            var app = {};   
+            var option;
+            option = {
+          title: { 
+            left: 'center'
+          },
+          tooltip: {
+            trigger: 'item',
+          },
+          color:[
+          '#fca104','#fcb70a','#f8bc31','#feba07','#f9d367','fbcd31','#f7de98','#f7da94'
+          ],
+          toolbox: {
+            show: true,
+            feature: {
+              mark: { show: true },
+            }
+          },
+          series: [
+            {
+              type: 'pie',
+              radius: [40, 200],
+              center: ['43%', '50%'],
+              roseType: 'area',
+              itemStyle: {
+                borderRadius: 5
+              },
+              data: [
+              { value: a.I, name: 'I内向' },
+              { value: a.S, name: 'S感觉' },
+              { value: a.F, name: 'F情感' },
+              { value: a.P, name: 'P知觉' },
+              { value: a.E, name: 'E外向' },
+              { value: a.N, name: 'N直觉' },
+              { value: a.T, name: 'T思维' },                              
+              { value: a.J, name: 'J判断' }
+              ]
+            }
+          ]
+        };
+        
+            if (option && typeof option === 'object') {
+              myChart.setOption(option);
+            }
+        
+            window.addEventListener('resize', myChart.resize);
+          </script>  
+           <script src="../js/endAnalyse.js"></script> 
+           <script> 
+            art2.onmouseover=function(){
+            art2.innerHTML="“艺术能手”们天性保守务实，使他们乍看起来很简单，但实际上读懂他们相当不易。 他们友好又缄默，行事冷静但会突然的不由自主，好奇心旺盛但是不能够持续专注于正式的研究，即便是他们的朋友和爱人也常常觉得他们难以捉摸。他们可以暂时表现得非常忠诚和稳定，但是他们倾向于积累冲动的能量，并在没有任何征兆的情况下爆发出来，将他们的兴趣带到全新的方向。"
+            art2.className="art2_jc prod2_jc";
+            }
+            art1.onmouseover=function(){
+            art1.innerHTML="大胆而实际的实验家，擅长使用任何形式的工具。拥有工匠精神、难以向人打开心扉、不喜欢回复消息、颇喜欢黑色幽默、头脑冷静。"
+            art1.className="art1_jc prod1_jc";
+}
+          </script>
+           
+</body>
+</html>

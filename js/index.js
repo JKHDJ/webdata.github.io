@@ -4,8 +4,9 @@ function loginorloginout() {
     if (indexusername == null) {
         location.href = './html/regdetlogin.html'
     } else {
-        localStorage.removeItem('username');
+
         location.href = './html/regdetlogin.html'
+        localStorage.removeItem('username');
     }
 
 

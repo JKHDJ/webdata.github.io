@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>数据可视化</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <style>
+        .a1 {
+            text-decoration: none;
+            color: rgb(12, 12, 12);
+            text-align: left;
+            position: fixed;
+            left: 10%;
+            top: 0%;
+            font-size: small;
+        }
+        
+        #welcome {
+            position: fixed;
+            top: 2.5%;
+            color: black;
+            font: 500 24px '优设标题黑';
+        }
+        
+        #nav {
+            position: relative;
+            border: none;
+            border-radius: 10em;
+            display: flex;
+            list-style: none;
+            background: #ffffff;
+            box-shadow: 20px 40px 40px #00000033;
+            padding: 10px;
+            margin: 0;
+            padding: 0;
+            top: 0.5%;
+            right: 25%;
+            overflow: hidden;
+            position: fixed;
+        }
+        
+        #nav li a {
+            position: relative;
+            padding: 15px 50px;
+            font: 500 24px '优设标题黑';
+            border: none;
+            outline: none;
+            color: rgb(0, 0, 0);
+            display: inline-block;
+            text-decoration: none;
+            z-index: 3;
+        }
+        
+        .slide1,
+        .slide2 {
+            position: absolute;
+            display: inline-block;
+            height: 60px;
+            border-radius: 10em;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1.05);
+        }
+        
+        .slide1 {
+            background-color: rgb(170, 190, 255);
+            z-index: 2;
+        }
+        
+        .slide2 {
+            opacity: 0;
+            background-color: rgba(170, 190, 255, .5);
+            z-index: 1;
+            box-shadow: 0 0 20px #ffffffaa inset;
+        }
+        
+        .squeeze {
+            transform: scale(0.9);
+        }
+        
+        #niubi {
+            font-size: smaller;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header>
+        <div id="loginStatus">
+            <a href="#" class="a1" onclick="loginorloginout()">
+                <h1 id="welcome">请登录账户</h1>
+            </a>
+            <ul id="nav">
+                <li class="slide1"></li>
+                <li class="slide2"></li>
+                <li><a href="./html/bdyj.html">意见反馈</a></li>
+                <li><a href="./html/select.html">功能选择</a></li>
+                <li><a href="./html/choose.html">人格测试</a></li>
+
+            </ul>
+        </div>
+
+        <div class="show-time"></div>
+        <script>
+            var t = null;
+            t = setTimeout(time, 1000); //开始运行
+            function time() {
+                clearTimeout(t); //清除定时器
+                dt = new Date();
+                var y = dt.getFullYear();
+                var mt = dt.getMonth() + 1;
+                var day = dt.getDate();
+                var h = dt.getHours(); //获取时
+                var m = dt.getMinutes(); //获取分
+                var s = dt.getSeconds(); //获取秒
+                document.querySelector(".show-time").innerHTML =
+                    "当前时间：" +
+                    y +
+                    "年" +
+                    mt +
+                    "月" +
+                    day +
+                    "日-" +
+                    h +
+                    "时" +
+                    m +
+                    "分" +
+                    s +
+                    "秒";
+                t = setTimeout(time, 1000); //设定定时器，循环运行
+            }
+        </script>
+    </header>
+
+    <!-- 页面主体 -->
+    <section class="mainbox">
+        <!-- 左侧盒子 -->
+        <div class="column">
+            <div class="panel bar">
+                <!-- 图表放置盒子 -->
+                <div class="chart"></div>
+                <!-- 伪元素绘制盒子下边角 -->
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel line">
+
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel pie">
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+        </div>
+        <!-- 中间盒子 -->
+        <div class="column">
+            <!-- 头部 no模块 -->
+            <div class="no">
+                <div class="no-hd">
+                    <ul>
+                        <li>12434</li>
+                        <li>10983</li>
+                    </ul>
+                </div>
+                <div class="no-bd">
+                    <ul>
+                        <li>需求人数</li>
+                        <li>市场供应人数</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- map模块 -->
+            <div class="map">
+                <div class="map1"></div>
+                <div class="map2"></div>
+                <div class="map3"></div>
+                <div class="chart"></div>
+            </div>
+        </div>
+        <!-- 右侧盒子 -->
+        <div class="column">
+            <div class="panel bar2">
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel line2">
+
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel pie2">
+                <h2 id="niubi">计算机专业就业人员分布图</h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./js/flexible.js"></script>
+    <script src="./js/echarts.min.js"></script>
+    <script src="./js/jquery.js"></script>
+    <!-- 引入china.js 完成地图模块 -->
+    <script src="./js/china.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/app.js"></script>
+    <script>
+        $("#nav a").on("click", function() {
+            var position = $(this).parent().position();
+            var width = $(this).parent().width();
+            $("#nav .slide1").css({
+                opacity: 1,
+                left: +position.left,
+                width: width
+            });
+        });
+        $("#nav a").on("mouseover", function() {
+            var position = $(this).parent().position();
+            var width = $(this).parent().width();
+            $("#nav .slide2").css({
+                opacity: 1,
+                left: +position.left,
+                width: width
+            }).addClass("squeeze");
+        });
+        $("#nav a").on("mouseout", function() {
+            $("#nav .slide2").css({
+                opacity: 0
+            }).removeClass("squeeze");
+        });
+        var currentWidth = $("#nav li:nth-of-type(3) a").parent("li").width();
+        var current = $("li:nth-of-type(3) a").position();
+        $("#nav .slide1").css({
+            left: +current.left,
+            width: currentWidth
+        });
+    </script>
+</body>
+<audio src="./music/3.MP3" autoplay="autoplay" loop="loop"></audio>
+
+</html>

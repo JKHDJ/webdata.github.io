@@ -15,7 +15,7 @@
 section {
     position: relative;
     min-height: 100vh;
-    background: url(../images//bg.jpg) no-repeat top center;
+    background-color: rgba(188, 255, 255, 0.45);
     background-size: cover;
     color: #a0a5a8;
     display: flex;
